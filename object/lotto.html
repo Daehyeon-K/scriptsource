@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 이번 주 로또 번호 생성
+        // 로또 번호 6개 추출해 배열에 담고 출력
+        let arr = [];
+        while(arr.length<6){
+            let temp = Math.ceil(Math.random()*45);
+            if (arr.indexOf(temp)<0){
+                arr.push(temp);
+            }
+        }
+        
+        document.write("추천 로또 번호는 : ")
+        for (var x of arr) {
+            document.write(x+" ");
+        }
+        document.write("입니다.")
+
+    </script>
+</body>
+</html>

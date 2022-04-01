@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 배열 선언하기
+        
+        const cars1 = [];
+        cars1 [0] = "1";
+        cars1 [1] = "2";
+        cars1 [2] = "3";
+
+        const cars2 = ['Saab', 'Volvo', 'BMW'];
+
+        const cars3 = new Array('Saab', 'Volvo', 'BMW');
+
+        // 배열 요소는 같은 타입일 필요가 없음
+        const arr = [35, "a", 65, true, {}];
+
+        // 배열 요소 추가
+        const cars4 = ['Saab', 'Volvo', 'BMW'];
+        cars4[3] = "Audi";
+        document.write(cars4);
+
+        document.write('<br>');
+
+        const cars5 = new Array('Saab', 'Volvo', 'BMW');
+        //cars5[3] = "Audi";
+        cars5.push('Audi'); //원래는 이게 맞는데 위에 것도 되긴 함
+        document.write(cars5);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            let header = document.createElement("h1");
+            let content = document.createTextNode("Hello DOM");
+
+            header.appendChild(content);
+            document.body.appendChild(header);
+        };
+        // 소스엔 작성하지 않았는데 요소엔 들어가서 문서에 반영되는 경우 있음. 이번 처럼.
+        // 동적으로 작업해서 밀어넣는 것
+        // 이제부턴 요소를 만들수도 있는 것
+
+    </script>
+</body>
+</html>

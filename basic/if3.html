@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 사용자에게 국어, 영어, 수학점수 입력받아 평균 구하고
+        평균이 90 이상은 A, 80 이상은 B, 70 이상은 C 나머지는 D -->
+    <script>
+    let kScore = parseInt(prompt("국어점수"));
+    let eScore = Number(prompt("영어점수"));
+    let mScore = Number(prompt("수학점수"));
+    
+    let mean = (kScore+eScore+mScore)/3;
+    alert(mean);
+
+    if (mean>=90){
+        alert("A");
+    } else if (mean>=80){
+        alert("B");
+    } else if (mean>=70){
+        alert("C")
+    } else {
+        alert("D")
+    }
+
+    </script>
+</body>
+</html>

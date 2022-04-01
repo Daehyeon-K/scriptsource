@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 클래스명 중복 가능. 아이디만 중복 금지 -->
+    <h1 class="header1">Header1</h1>
+    <h1 class="header1">Header1</h1>
+    <h1 class="header1">Header1</h1>
+    <h1 class="header1">Header1</h1>
+
+    <script>
+        // h1 요소 가져오기
+        let header1 = document.getElementsByClassName("header1");
+        console.log(header1);
+
+        for(var i = 0; i<header1.length ; i++){
+            console.log(header1.item(i)); // header1[0] ~[1], [2] 하거나 item 메소드 사용 가능
+        }
+
+        //근데 사실 id로 하는게 제일 편해서 웬만하면 id 넣어서 하는 게 나음
+    </script>
+</body>
+</html>
