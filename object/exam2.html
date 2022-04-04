@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./left-arrow.png" alt="arrow" srcset="">
+    <button type="button" onclick="changeImg()">버튼을 눌러보세요</button>
+    <script>
+        function changeImg(){
+            // 버튼 클릭 시 현재 보여지는 이미지 변경
+            document.querySelector("img").src="./right-arrow.png";
+            document.querySelector("button").setAttribute("onclick", "changeImg2()");
+        }
+        function changeImg2(){
+            // 버튼 클릭 시 현재 보여지는 이미지 변경
+            document.querySelector("img").src="./left-arrow.png";
+            document.querySelector("button").setAttribute("onclick", "changeImg()");
+        }
+    </script>
+</body>
+</html>

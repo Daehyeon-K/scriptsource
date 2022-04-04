@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label>이름</label>
+            <input type="text" name="name", id="name" />
+        </div>
+        <div>
+            <label>비밀번호</label>
+            <input type="password" name="password", id="password" />
+        </div>
+        <div>
+            <label>나이</label>
+            <input type="number" name="age", id="age" />
+        </div>
+        <div>
+            <button type="submit" onclick="checkForm()">전송</button> <!--이러면 action으로 보내줌. 이때 자기 주소로 들어감-->
+            <button type="reset">취소</button> <!-- 취소로 form 안을 깨끗하게 해줌 -->
+        </div>
+    </form>
+    <script>
+        function checkForm() {
+            // 태그가 가진 기본 동작 제어
+            event.preventDefault(); // 태그가 가진 기본 동작 막아줌
+
+            // 사용자의 입력 요소 가져오기 (일단 여기선 요소만 하는 이유 있음)
+            let name = document.querySelector('#name');
+            console.log(name);
+            let password = document.querySelector('#password');
+            let age = document.querySelector('#age');
+
+            // 각 요소의 값들이 없으면 경고창 보내기
+            // 다시 입력할 수 있게 포커스 주기 (포커스는 커서 깜빡이게 주는 거)
+            if (name.value == ""){
+                alert("이름을 확인하세요");
+                name.focus();
+                return;
+            } else if (password.value == ""){
+                alert("비밀번호를 확인하세요");
+                password.focus();
+                return;
+            } else if (age.value == ""){
+                alert("나이를 확인하세요");
+                age.focus();
+                return;
+            }
+
+            // form submit()
+            document.querySelector("form").submit();
+
+        }
+    </script>
+</body>
+</html>
