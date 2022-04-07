@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./movie.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .box1{
+            font-family: 'Noto Sans KR', bold, sans-serif;
+        }
+    </style>
 </head>
 <body>
     <form action="">
@@ -96,18 +107,22 @@
             })
             .then((data) => {
                 let result = "";
-                result +="영화제목 : "+data.movieInfoResult.movieInfo.movieNm+"</br>";
-                result +="영어제목 : "+data.movieInfoResult.movieInfo.movieNmEn+"</br>";
-                result +="상영시간 : "+data.movieInfoResult.movieInfo.showTm+"</br>";
+                let movie = data.movieInfoResult.movieInfo;
+                result +="영화제목 : "+movie.movieNm+"</br>";
+                result +="영어제목 : "+movie.movieNmEn+"</br>";
+                result +="상영시간 : "+movie.showTm+"</br>";
 
-                //result +="감독 : "+data.movieInfoResult.movieInfo.diretors.peopleNm;
-                //data.movieInfoResult.movieInfo.diretors.forEach((director) => {
-                //    result +="감독 : "+director.peopleNm;
-                //});
+                movie.directors.forEach((director) => {
+                    result +="감독 : "+director.peopleNm+"</br>";
+                });
 
-                data.movieInfoResult.movieInfo.actors.forEach((actor) => {
+                length = movie.actors.length;
+
+                movie.actors.forEach((actor, idx) => {
                     result +="배우 : "+actor.peopleNm+"</br>";
                 });
+
+
 
                 console.log(result);
                 //data.movieInfoResult.movieInfo.forEach(element => {

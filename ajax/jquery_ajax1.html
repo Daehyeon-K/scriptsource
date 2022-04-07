@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <script>
+//        $.ajax({
+//            url:'',
+//            //type:'get', // 디폴트가 get이라 get이라고는 안적어도 됨
+//            //data: formData,
+//
+//            dataType: '요청데이터 타입', // html, text, json, xml, ...
+//
+//            success: function(data){ // then 두개 합친게 이 부분이라 생각하면 됨
+//                // 서버로부터 요청한 결과가 도착하면 호출
+//            }, // 등록 해두고 나중에 호출될 수 있는 callback 함수
+//
+//            error: function(){ // 이건 catch 부분
+//                // 서버가 응답을 하지 않는 경우 호출
+//            } // 등록 해두고 나중에 호출될 수 있는 callback 함수
+//        });
+
+    $.ajax({
+        url:'./data/test.txt', // jQuery로 ajax 통해 txt 가져오기
+        dataType: 'text',
+        success: function(data){
+            console.log(data);
+            $("div").html(data);
+        },
+        error: function(xhr, status, error){
+            console.log(status);
+        }
+    });
+
+    </script>
+</body>
+</html>
